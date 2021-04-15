@@ -1,0 +1,17 @@
+name: CI
+
+on: push
+
+jobs:
+  package:
+    name: Run App Deployer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: corva-ai/app-deployer@dd761f959fbdf02dc643e4a37cad42fd6ff8ba32
+        with:
+          api-url: ${{ secrets.API_URL }}
+          api-key: ${{ secrets.API_KEY }}
+          app-key: corva.sample-app-deployer
+          notes: Sample App Deployment
+          skip-analysis: false
+          skip-testing: false
