@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "license": {
+    "type": "MIT",
+    "url": "https://www.corva.ai/license/"
+  },
+  "developer": {
+    "authors": []
+  },
+  "application": {
+    "type": "scheduler",
+    "key": "corva.sample_app_deployer",
+    "visibility": "public",
+    "name": "Sample App Deployer",
+    "category": "analytics",
+    "segments": ["drilling"]
+  },
+  "settings": {
+    "entrypoint": {
+      "file": "lambda_function",
+      "function": "lambda_handler"
+    },
+    "timeout": 120,
+    "memory": 128,
+    "runtime": "python3.8",
+    "app": {
+      "cron_string": "*/5 * * * *"
+    }
+  },
+  "environment": {},
+  "datasets": {}
+}
