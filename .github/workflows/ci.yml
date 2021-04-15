@@ -7,10 +7,10 @@ jobs:
     name: Run App Deployer
     runs-on: ubuntu-latest
     steps:
-      - uses: corva-ai/app-deployer@79fadd0d76f2f4bb8ab36b1d2c83fe4d603248bb
+      - uses: corva-ai/app-deployer@71d32ef60da9314f6c5e889382e79e54886a95a8
         with:
-          api-url: ${{ secrets.API_URL }}
-          api-key: ${{ secrets.API_KEY }}
+          api-url: ${{ secrets.CORVA_API_URL }}
+          api-key: ${{ secrets.CORVA_API_KEY }}
           app-key: corva.sample-app-deployer
           notes: Sample App Deployment
           skip-analysis: false
