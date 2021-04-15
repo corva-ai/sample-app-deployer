@@ -7,7 +7,7 @@ jobs:
     name: Run App Deployer
     runs-on: ubuntu-latest
     steps:
-      - user: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: corva-ai/app-deployer@develop
         with:
           api-url: ${{ secrets.CORVA_API_URL }}
